@@ -15,3 +15,6 @@ select customers.name, customers.email, orders.product, orders.amount from custo
 rs.customers_id = orders.customers_id;
 
 select customers.name, customers.email, orders.product, orders.amount from customers left join orders on customers.customers_id = orders.customers_id;
+
+select customers.name, customers.email, orders.product, orders.amount from customers right join orders on custome
+rs.customers_id = orders.customers_id;
