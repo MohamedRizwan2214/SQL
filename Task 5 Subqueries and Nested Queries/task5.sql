@@ -18,4 +18,5 @@ select employee_id,name from employees where salary > (select avg(salary) from e
  select * from employees e1 where salary=(select max(salary) from employees e2 where e1.department = e2.department); -- correleated subquery
  --the above query is used to find the employee with maximum salary in each department
 
- 
+  select name,department,salary ,(select avg(salary) from employees e1 where e1.department = e2.department) as avg_salary_dept from employees e2;
+  --the above query is used to find the average salary of each department utilizing dynamic columns
